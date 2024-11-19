@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Do Universo - Dia da Astronomia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Portal Do Universo</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="historia.html">História</a></li>
+                <li><a href="educacao-cientifica.html">Educação Científica</a></li>
+                <li><a href="cultura.html">Cultura</a></li>
+                <li><a href="tecnologia.html">Tecnologia</a></li>
+                <li><a href="futuro-astronomia.html">Futuro da Astronomia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>O Dia da Astronomia</h2>
+        <p>O Dia da Astronomia é uma celebração que ocorre no dia 2 de dezembro para promover a ciência da astronomia e a observação do céu.</p>
+        <p>É uma oportunidade para apreciar a beleza do universo e aprender mais sobre os corpos celestes que nos cercam.</p>
+        <img src="https://vidaenusa.org/wp-content/uploads/2024/01/cuanto-gana-astronomo-usa.jpg" alt="Espaço" style="width:100%; height:auto;">
+        <button onclick="window.location.href='educacao-cientifica.html'" style="padding: 10px; font-size: 1em; margin-top: 15px;">Saiba mais sobre a história</button>
+    </section>
+
+    <div style="margin: 40px 0;"></div> <!-- Espaço entre as seções -->
+
+    <section>
+        <h2>Contagem Regressiva para o Dia da Astronomia</h2>
+        <p>Faltam apenas alguns dias para a celebração do Dia da Astronomia! Acompanhe a contagem regressiva:</p>
+        <div id="countdown">
+            <span id="days">00</span> dias,
+            <span id="hours">00</span> horas,
+            <span id="minutes">00</span> minutos,
+            <span id="seconds">00</span> segundos
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Portal Do Universo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const astronomyDay = new Date("Dec 2, 2024 00:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = astronomyDay - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>

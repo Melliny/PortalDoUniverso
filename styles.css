@@ -1,0 +1,148 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("img/hyperion-space-4k-j9.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00; /* Cor de destaque ao passar o mouse */
+}
+
+section {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+#countdown {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+img {
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* Estilos da grade */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Cria colunas responsivas */
+    gap: 20px; /* Espaço entre os itens */
+    margin-top: 20px;
+}
+
+.grid-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.grid-item img {
+    max-width: 100%; /* Ajusta a imagem ao tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Estilos do botão */
+button {
+    background: linear-gradient(90deg, #1c063b, #442d6b); /* Gradiente de roxo */
+    color: #ffffff; /* Cor do texto em branco */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; /* Aumentar o preenchimento do botão */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s; /* Suavização na transição */
+}
+
+button:hover {
+    background: linear-gradient(90deg, #18023e, #3f2485); /* Gradiente mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+}
