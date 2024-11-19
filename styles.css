@@ -1,4 +1,4 @@
-/* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
@@ -45,7 +45,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffcc00; /* Cor de destaque ao passar o mouse */
+    color: #ffcc00; 
 }
 
 section {
@@ -78,11 +78,10 @@ img {
     margin: 15px 0;
 }
 
-/* Estilos da grade */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Cria colunas responsivas */
-    gap: 20px; /* Espaço entre os itens */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px; 
     margin-top: 20px;
 }
 
@@ -95,8 +94,8 @@ img {
 }
 
 .grid-item img {
-    max-width: 100%; /* Ajusta a imagem ao tamanho do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100%; 
+    height: auto; 
     border-radius: 10px;
 }
 
@@ -110,24 +109,22 @@ footer {
     margin-top: 20px;
 }
 
-/* Estilos do botão */
 button {
-    background: linear-gradient(90deg, #1c063b, #442d6b); /* Gradiente de roxo */
-    color: #ffffff; /* Cor do texto em branco */
+    background: linear-gradient(90deg, #1c063b, #442d6b);
+    color: #ffffff; 
     border: none;
     border-radius: 5px;
-    padding: 10px 20px; /* Aumentar o preenchimento do botão */
+    padding: 10px 20px; 
     font-size: 1em;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s; /* Suavização na transição */
+    transition: background 0.3s, transform 0.2s; 
 }
 
 button:hover {
-    background: linear-gradient(90deg, #18023e, #3f2485); /* Gradiente mais escuro ao passar o mouse */
-    transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
+    background: linear-gradient(90deg, #18023e, #3f2485); 
+    transform: scale(1.05); 
 }
 
-/* Estilos responsivos */
 @media (max-width: 600px) {
     nav ul li {
         display: block;
@@ -143,6 +140,6 @@ button:hover {
     }
 
     .grid-container {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        grid-template-columns: 1fr; 
     }
 }
