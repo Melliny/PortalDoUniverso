@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +6,14 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: url("img/hyperion-space-4k-j9.jpg") no-repeat center center fixed;
+    background-image: url("img/hyperion-space-4k-j9.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
     color: #ffffff;
     line-height: 1.6;
 }
-
 
 header {
     background: rgba(0, 0, 0, 0.8);
