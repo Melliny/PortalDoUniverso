@@ -43,15 +43,19 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Portal Do Universo. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Portal Do Universo. Todos os direitos reservados.</p>
     </footer>
 
     <script>
-        const astronomyDay = new Date("Dec 2, 2025 00:00:00").getTime();
-
         function updateCountdown() {
+            const astronomyDay = new Date("Dec 2, 2025 00:00:00").getTime();
             const now = new Date().getTime();
             const distance = astronomyDay - now;
+
+            if (distance <= 0) {
+                document.getElementById("countdown").innerHTML = "O Dia da Astronomia chegou!";
+                return;
+            }
 
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -65,6 +69,7 @@
         }
 
         setInterval(updateCountdown, 1000);
+        updateCountdown(); 
     </script>
 </body>
 </html>
